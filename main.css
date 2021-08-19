@@ -1,5 +1,43 @@
+:root{
+    --bg-primary: #D1D5DB;
+    --bg-secondary: #A78BFA;
+}
+body{
+    margin: 0;
+    padding: 2rem;
+    background: var(--bg-primary);
+}
+
 .container{
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg-secondary);
     display: flex;
-    flex-direction: column;
-    width: 50vw;
+    flex-direction:column;
+    width: 50%;
+    text-align: center;
+}
+#error-message{
+    color: red;
+    /* border: 2px solid; */
+    font-size: large;
+}
+#bill-amount{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border-radius: 2px;
+}
+
+#cash-given{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border-radius: 2px;
+}
+#check{
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    /* width: 50% */
 }
