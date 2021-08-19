@@ -2,7 +2,7 @@ const billAmt = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
 const checkBtn = document.querySelector("#check");
 const errorMessage = document.querySelector("#error-message");
-const availableNotes = [2000,500,100,50,20,10,5,1];
+const availableNotes = [2000,500,100,50,10,5,1];
 const noOfNotes = document.querySelectorAll(".no-of-notes");
 
 function clickHandler(){
@@ -18,11 +18,11 @@ function validateBillAmount(){
     }
 }
 function validateBillVsCashPaid(){
-    if(cashGiven.value >= billAmt.value){
-        const amountToBeReturned = cashGiven.value - billAmt.value;
+    if(Number(cashGiven.value) >= Number(billAmt.value)){
+        const amountToBeReturned = Number(cashGiven.value) - Number(billAmt.value);
         calculateChange(amountToBeReturned);
     } else{
-        showMessage("The cash given is not sufficient!!")
+        showMessage("What? Do you want wash plates!!")
     }
 }
 
