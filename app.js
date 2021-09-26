@@ -11,7 +11,7 @@ function clickHandler(){
 
 function validateBillAmount(){
     hideMessage();
-    if (billAmt.value>0){
+    if (Number(billAmt.value)>0){
         validateBillVsCashPaid()
     } else {
         showMessage("Invalid bill amount.")
@@ -31,9 +31,11 @@ function hideMessage(){
 }
 
 function calculateChange(amountToBeReturned){
+    
     for(let i=0;i<availableNotes.length;i++){
+        noOfNotes[i].innerText = "";
         const numberOfNotes = Math.trunc(amountToBeReturned/availableNotes[i]);
-        amountToBeReturned %= availableNotes[i];
+        amountToBeReturned = amountToBeReturned %availableNotes[i];
         if(numberOfNotes>0){
         noOfNotes[i].innerText = numberOfNotes;
         }
